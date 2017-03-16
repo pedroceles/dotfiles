@@ -1,0 +1,7 @@
+[alias]
+	st = status
+[user]
+	name = Pedro Celes
+	email = pedro.celes123@gmail.com
+[push]
+	default = matching
