@@ -2,7 +2,7 @@ export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
 
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/pedroceles/.oh-my-zsh
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -100,3 +100,11 @@ fi
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias runsolr='cd /Users/pedroceles/dev/vialink/solr-4.7.2/example && java -jar start.jar'
 alias composer='php /usr/local/bin/composer.phar'
+alias conhecimentos='vim ~/dev/globo/conhecimentos.md'
+
+export EDITOR=vim
+export GOPATH=~/go
+export PATH=$PATH:$GOPATH/bin
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
