@@ -14,5 +14,6 @@ Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'tpope/vim-commentary'
 call plug#end()
 

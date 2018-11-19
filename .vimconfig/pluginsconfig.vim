@@ -9,15 +9,19 @@ let NERDTreeMapOpenInTab='t'
 " ====================================================================================
 map <C-p> :Files<CR>
 map <C-t> :Tags<CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
 
 " ====================================================================================
 " ==================== ALE ===========================================================
 " ====================================================================================
 let g:ale_linters = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint', 'flow-language-server'],
 \   'python': ['flake8', 'pyls'],
 \}
-map <F2> :ALEGoToDefinitionInTab<CR>
+map <F2> :ALEGoToDefinition<CR>
+map <S-F2> :ALEGoToDefinitionInTab<CR>
+map <F8> :ALENext<CR>
+map <S-F8> :ALEPrevious<CR>
 set completeopt=menu,menuone,preview,noselect,noinsert
 
 " ====================================================================================
@@ -26,6 +30,7 @@ set completeopt=menu,menuone,preview,noselect,noinsert
 " Start autocompletion after 4 chars
 let g:ycm_min_num_of_chars_for_completion = 4
 let g:ycm_min_num_identifier_candidate_chars = 4
+let g:ycm_show_diagnostics_ui = 0
 let g:ycm_enable_diagnostic_highlighting = 0
 " Don't show YCM's preview window [ I find it really annoying ]
 set completeopt-=preview
@@ -46,4 +51,9 @@ let g:pymode_rope_rename_bind = '<F6>'
 let g:javascript_plugin_flow = 1
 let g:javascript_plugin_jsdoc = 1
 
+
+" ====================================================================================
+" ==================== NERD COMMENTER ================================================
+" ====================================================================================
+let g:NERDSpaceDelims = 1
 

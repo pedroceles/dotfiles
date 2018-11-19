@@ -1,5 +1,6 @@
 set number
 set ruler 
+set magic 
 set incsearch
 set hlsearch
 set autoindent
@@ -13,6 +14,8 @@ set encoding=utf-8
 set list
 set foldmethod=indent
 set foldlevelstart=99
+set splitright
+set splitbelow
 
 
 
