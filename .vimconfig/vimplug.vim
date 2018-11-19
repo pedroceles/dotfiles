@@ -21,5 +21,6 @@ Plug 'zchee/deoplete-jedi'
 Plug 'flazz/vim-colorschemes'
 Plug 'steelsojka/deoplete-flow'
 Plug 'drewtempelmeyer/palenight.vim'
+Plug 'vim-airline/vim-airline'
 call plug#end()
 
