@@ -20,5 +20,6 @@ Plug 'Shougo/neosnippet-snippets'
 Plug 'zchee/deoplete-jedi'
 Plug 'flazz/vim-colorschemes'
 Plug 'steelsojka/deoplete-flow'
+Plug 'drewtempelmeyer/palenight.vim'
 call plug#end()
 
