@@ -13,6 +13,12 @@ Plug 'majutsushi/tagbar'
 Plug 'pangloss/vim-javascript'
 Plug 'mxw/vim-jsx'
 Plug 'python-mode/python-mode', { 'branch': 'develop' }
-Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+" Plug 'Valloric/YouCompleteMe', { 'do': './install.py --tern-completer' }
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'Shougo/neosnippet.vim'
+Plug 'Shougo/neosnippet-snippets'
+Plug 'zchee/deoplete-jedi'
+Plug 'flazz/vim-colorschemes'
+Plug 'steelsojka/deoplete-flow'
 call plug#end()
 
