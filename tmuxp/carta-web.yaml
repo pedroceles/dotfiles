@@ -1,0 +1,31 @@
+session_name: carta-web
+windows:
+- layout: 4fbd,272x58,0,0{211x58,0,0,6,60x58,212,0[60x29,212,0,8,60x28,212,30,9]}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: work && nvim
+  - shell_command: work
+  - shell_command: work
+  start_directory: /Users/pedroceles/carta-web
+  window_name: development
+- layout: 7fc6,272x58,0,0{76x58,0,0,10,102x58,77,0,12,92x58,180,0,13}
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: work && dev_py_server
+  - shell_command: work && dev_npm_server
+  - shell_command: work && dev_celery
+  start_directory: /Users/pedroceles/carta-web
+  window_name: tasks
+- focus: 'true'
+  layout: 67e3,272x58,0,0,14
+  options:
+    automatic-rename: 'off'
+  panes:
+  - focus: 'true'
+    shell_command: work
+  start_directory: /Users/pedroceles/carta/carta-web
+  window_name: scripting
