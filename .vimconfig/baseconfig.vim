@@ -42,4 +42,3 @@ augroup vimrcEx
 augroup END
 
 let g:python3_host_prog = '/Users/pedroceles/.pyenv/versions/3.7.1/envs/neovim/bin/python'
-let g:python_host_prog = '/usr/local/bin/python2'

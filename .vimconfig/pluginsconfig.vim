@@ -9,18 +9,26 @@ let NERDTreeMapOpenInTab='t'
 " ====================================================================================
 " ==================== FZF ===========================================================
 " ====================================================================================
-map <C-p> :GFiles<CR>
-map <C-S-t> :Tags<CR>
-map <C-S-f> :Rg 
+map <C-p> :Files<CR>
+map <silent> <leader>t :Tags <C-R><C-W><CR>
+map <C-F> :BLines<CR>
+nnoremap <silent> <Leader><Leader>t call fzf#vim#tags({'options': '-q '.shellescape(expand('<cword>'))})<CR>
+nnoremap <silent> <Leader>rg :Rg <C-R><C-W><CR>
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+let g:fzf_history_dir = '~/.local/share/fzf-history'
 
 
 " ====================================================================================
 " ==================== ALE ===========================================================
 " ====================================================================================
 let g:ale_linters = {
-\   'javascript': ['eslint'],
+\   'javascript': ['eslint', 'flow'],
 \   'python': ['flake8', 'pyls'],
 \}
+
+"let g:ale_fixers = {'javascript': ['eslint']}
+let g:ale_fix_on_save = 0
+
 map <F2> :ALEGoToDefinition<CR>
 map <S-F2> :ALEGoToDefinitionInTab<CR>
 map <F8> :ALENext<CR>
@@ -66,35 +74,10 @@ let g:NERDSpaceDelims = 1
 " ====================================================================================
 " <TAB>: completion.
 let g:deoplete#enable_at_startup = 1
-let g:deoplete#file#enable_buffer_path = 1
+call deoplete#custom#option('max_list', 30)
+call deoplete#custom#source('flow', 'rank', 999)
 inoremap <expr><TAB>  pumvisible() ? "\<C-n>" : "\<TAB>"
 
-
-" ====================================================================================
-" ==================== DEOPLETE FLOW =================================================
-" ====================================================================================
-function! StrTrim(txt)
-  return substitute(a:txt, '^\n*\s*\(.\{-}\)\n*\s*$', '\1', '')
-  endfunction
-
-let g:flow_path = StrTrim(system('PATH=$(npm bin):$PATH && which flow'))
-
-if g:flow_path != 'flow not found'
-  let g:deoplete#sources#flow#flow_bin = g:flow_path
-endif
-let g:deoplete#sources#flow#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ ]
-"
-" ====================================================================================
-" ==================== DEOPLETE JS =================================================
-" ====================================================================================
-let g:deoplete#sources#ternjs#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ ]
-"
 "
 " ====================================================================================
 " ==================== COLORSCHEMES ==================================================
